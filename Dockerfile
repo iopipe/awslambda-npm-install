@@ -10,8 +10,7 @@ RUN mkdir -p /tmp; \
     curl -vvv https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}.tar.gz | \
     tar -zxvC /tmp/
 WORKDIR /tmp/node-v${NODE_VERSION}
-ENV MAKE make -j4
-RUN alias make=${MAKE} mkdir -p /var/lang; \
+RUN mkdir -p /var/lang; \
     ./configure --prefix=/var/lang; \
     $MAKE all install
 
