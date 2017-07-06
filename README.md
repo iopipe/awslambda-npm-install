@@ -47,7 +47,7 @@ $ serverless create -t aws-nodejs
 $ docker run -v $PWD:/var/task iopipe/awslambda-npm-install protobuf
 $ cat <<EOF > handler.js
 var protobuf = require('protobuf')
-exports.handler = (event, context, callback) => {
+module.exports.hello = (event, context, callback) => {
   callback()
 }
 EOF
