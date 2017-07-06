@@ -36,7 +36,7 @@ Build for NodeJS v4.3.2:
 
 Build for NodeJS v6.10.2:
 
-`docker build --build_arg NODE_VERSION=4.3.2 -t awslambda-npm-install .`
+`docker build --build_arg NODE_VERSION=6.10.2 -t awslambda-npm-install .`
 
 ## Technical details
 
