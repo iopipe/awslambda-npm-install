@@ -1,6 +1,6 @@
 FROM amazonlinux as builder
 MAINTAINER Erica Windisch <erica@iopipe.com>
-ARG NODE_VERSION=6.10.2
+ARG NODE_VERSION=4.3.2
 
 RUN yum groupinstall -yq "Development Tools"
 
