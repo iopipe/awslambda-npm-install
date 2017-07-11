@@ -17,6 +17,8 @@ RUN mkdir -p /var/lang; \
 FROM amazonlinux
 COPY --from=builder /var/lang /var/lang
 
+RUN yum groupinstall -yq "Development Tools"
+
 RUN mkdir -p /var/task
 WORKDIR /var/task
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lang/bin
