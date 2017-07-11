@@ -1,4 +1,4 @@
-FROM amazonlinux
+FROM amazonlinux as builder
 MAINTAINER Erica Windisch <erica@iopipe.com>
 ARG NODE_VERSION=6.10.2
 
@@ -13,6 +13,9 @@ WORKDIR /tmp/node-v${NODE_VERSION}
 RUN mkdir -p /var/lang; \
     ./configure --prefix=/var/lang; \
     make all install
+
+FROM amazonlinux
+COPY --from=builder /var/lang /var/lang
 
 RUN mkdir -p /var/task
 WORKDIR /var/task
