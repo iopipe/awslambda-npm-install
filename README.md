@@ -4,11 +4,17 @@ Native builder for AWS Lambda + NodeJS modules
 This project allows users to easily install NodeJS modules,
 including those written as addons with gyp in C/C++ for AWS Lambda.
 
+## Installation
+
+The easiest way to use this is via a shell alias installed as such:
+
+`$ echo 'alias awslambda-npm-install="docker run -v \$PWD:/var/task iopipe/awslambda-npm-install"' >> ~/.bashrc`
+
 ## Usage
 
 From your project directory:
 
-`docker run -v $PWD:/var/task iopipe/awslambda-npm-install <npm-path>`
+`$ awslambda-npm-install`
 
 This will build C/C++ modules and install them into your `node_modules` directory using
 the latest verison of NodeJS.
