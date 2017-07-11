@@ -12,7 +12,7 @@ RUN mkdir -p /tmp; \
 WORKDIR /tmp/node-v${NODE_VERSION}
 RUN mkdir -p /var/lang; \
     ./configure --prefix=/var/lang; \
-    $MAKE all install
+    make all install
 
 RUN mkdir -p /var/task
 WORKDIR /var/task
