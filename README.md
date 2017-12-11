@@ -38,11 +38,11 @@ The tag may be specified as in the following command:
 
 Build for NodeJS v4.3.2:
 
-`docker build --build_arg NODE_VERSION=4.3.2 -t awslambda-npm-install .`
+`docker build --build-arg NODE_VERSION=4.3.2 -t awslambda-npm-install .`
 
 Build for NodeJS v6.10.2:
 
-`docker build --build_arg NODE_VERSION=6.10.2 -t awslambda-npm-install .`
+`docker build --build-arg NODE_VERSION=6.10.2 -t awslambda-npm-install .`
 
 ## Example project
 
