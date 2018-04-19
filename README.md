@@ -25,8 +25,10 @@ That's it!
 
 Specify a Docker tag on the image name. Supported tags include:
 
+* v8
 * v6
 * v4
+* v8.10.0
 * v6.10.2
 * v4.3.2
 
@@ -43,6 +45,10 @@ Build for NodeJS v4.3.2:
 Build for NodeJS v6.10.2:
 
 `docker build --build-arg NODE_VERSION=6.10.2 -t awslambda-npm-install .`
+
+Build for NodeJS v8.10.0:
+
+`docker build --build-arg NODE_VERSION=8.10.0 awslambda-npm-install .`
 
 ## Example project
 
